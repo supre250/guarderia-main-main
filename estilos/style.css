@@ -291,21 +291,25 @@ iframe {
   }
 
   section {
-    padding: 20px;
+    padding: 15px;
     border-width: 5px;
+    overflow: hidden;
   }
 
   section > div {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    width: 100%;
   }
 
   p {
-    font-size: 1;
+    font-size: 1rem;
     padding: 10px;
     border-left-width: 6px;
     box-shadow: 3px 3px 0 #1b3c1b;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   img {
