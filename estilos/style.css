@@ -1,0 +1,337 @@
+/* --------------------------------------------- */
+/* RESET BÁSICO - Quita márgenes y paddings por defecto */
+/* --------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------- */
+/* ESTILO GENERAL DEL CUERPO */
+/* Fondo tipo selva y fuente tipo cómic */
+/* --------------------------------------------- */
+body {
+  background: repeating-linear-gradient(
+    45deg,
+    #b5f58b,
+    #b5f58b 20px,
+    #d9e444 20px,
+    #d8e247 40px
+  );
+  font-family: 'Luckiest Guy', cursive;
+  color: #1b3c1b;
+  padding: 30px;
+  min-height: 100vh;
+}
+
+/* --------------------------------------------- */
+/* TÍTULO PRINCIPAL */
+/* Estilo grande, con sombra tipo cómic/jurásico */
+/* --------------------------------------------- */
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  color: #2a5e2a;
+  text-shadow: 3px 3px 0 #000;
+  margin-bottom: 40px;
+}
+
+/* --------------------------------------------- */
+/* ENCABEZADO (HEADER) */
+/* Fondo rojo, borde inferior estilo jurásico */
+/* --------------------------------------------- */
+header {
+  background-color: #ff5252;
+  text-align: center;
+  padding: 40px 20px;
+  border-bottom: 8px dashed #000;
+  box-shadow: 0 8px 0 #000;
+}
+
+header h1 {
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 3px 3px 0 #000;
+  letter-spacing: 2px;
+}
+
+/* --------------------------------------------- */
+/* NAVEGACIÓN */
+/* Menú con botones tipo burbuja coloridos y animados */
+/* --------------------------------------------- */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+nav li {
+  background-color: #00e5ff;
+  border: 3px solid #000;
+  border-radius: 30px;
+  padding: 10px 25px;
+  transition: transform 0.3s ease;
+  box-shadow: 4px 4px 0 #000;
+}
+
+nav li:hover {
+  transform: rotate(-3deg) scale(1.1);
+  background-color: #18ffff;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.4rem;
+}
+
+/* --------------------------------------------- */
+/* NUBE VOLADORA ANIMADA (tipo Kinto-un) */
+/* Se mueve de izquierda a derecha con animación */
+/* --------------------------------------------- */
+@keyframes volarKintoun {
+  0% { left: -150px; top: 100px; }
+  25% { left: 50px; top: 120px; }
+  50% { left: 150px; top: 80px; }
+  75% { left: 200px; top: 120px; }
+  100% { left: 110%; top: 100px; }
+}
+
+.nube-voladora {
+  background: url('https://assets.stickpng.com/thumbs/5cc1780ce7eba1088f142835.png') no-repeat;
+  background-size: contain;
+  width: 120px;
+  height: 80px;
+  position: absolute;
+  top: 100px;
+  left: -150px;
+  animation: volarKintoun 5s cubic-bezier(0.25, 0.75, 0.5, 1.25) infinite;
+  z-index: 2;
+}
+
+/* --------------------------------------------- */
+/* SECCIONES GENERALES */
+/* Fondos claros con bordes tipo selva */
+/* --------------------------------------------- */
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #d4fcb2;
+  border: 8px dashed #2a5e2a;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 8px 8px 0 #000;
+}
+
+section > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+div h1 {
+  font-size: 3rem;
+  color: #165016;
+  text-shadow: 2px 2px #000;
+  margin: 20px 0;
+}
+
+/* --------------------------------------------- */
+/* ARTÍCULOS */
+/* Caja blanca con borde llamativo y sombra */
+/* --------------------------------------------- */
+article {
+  background-color: #ffffff;
+  border: 8px solid #7252ff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 6px 6px 0 #000;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  transition: transform 0.3s ease;
+}
+
+article:hover {
+  transform: rotate(-1deg) scale(1.02);
+}
+
+/* --------------------------------------------- */
+/* SUBTÍTULOS */
+/* Color llamativo tipo rosa neon con sombra */
+/* --------------------------------------------- */
+h2 {
+  color: #fb1b89;
+  text-shadow: 2px 2px 0 #000;
+  margin-bottom: 15px;
+}
+
+/* --------------------------------------------- */
+/* PÁRRAFOS */
+/* Estilo burbuja con sombra y borde izquierdo */
+/* --------------------------------------------- */
+p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  background-color: #ebffdd;
+  border-left: 10px solid #2a5e2a;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 #1b3c1b;
+  flex: 1;
+  min-width: 300px;
+}
+
+/* --------------------------------------------- */
+/* IMÁGENES */
+/* Bordes verdes y efecto al pasar el mouse */
+/* --------------------------------------------- */
+img {
+  border: 8px solid #2a5e2a;
+  border-radius: 20px;
+  box-shadow: 6px 6px 0 #000;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+/* --------------------------------------------- */
+/* MAPAS (iframes) */
+/* Estilo enmarcado con sombras */
+/* --------------------------------------------- */
+iframe {
+  border: 6px solid #000;
+  border-radius: 10px;
+  box-shadow: 8px 8px 0 #000;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* --------------------------------------------- */
+/* VIDEOS */
+/* Caja con efecto de televisor con bordes vivos */
+/* --------------------------------------------- */
+.video-background {
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+  margin: 30px auto;
+  border: 8px solid #fb1b89;
+  border-radius: 20px;
+  box-shadow: 8px 8px 0 #000;
+  overflow: hidden;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100;
+  object-fit: cover;
+}
+
+.video-background.container {
+  position: relative;
+}
+.video-background-container::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.video-background-container {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --------------------------------------------- */
+/* BOTÓN DE REGRESO */
+/* Estilo sencillo y funcional con hover */
+/* --------------------------------------------- */
+.boton-atras li {
+  list-style: none;
+}
+
+.boton-atras a {
+  display: inline-block;
+  background-color: #0255a3;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.boton-atras a:hover {
+  background-color: #1abc9c;
+}
+
+/* --------------------------------------------- */
+/*Adaptabilidad moviles*/
+@media screen and (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  section {
+    padding: 20px;
+    border-width: 5px;
+  }
+
+  section > div {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  p {
+    font-size: 1;
+    padding: 10px;
+    border-left-width: 6px;
+    box-shadow: 3px 3px 0 #1b3c1b;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-width: 5px;
+  }
+
+  nav ul{
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav li {
+    padding: 10px 28px;
+    font-size: 1.2rem;
+  }
+
+  .video-background {
+    width: 100%;
+    border-width: 6px;
+  }
+
+  .boton-atras a {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+  
