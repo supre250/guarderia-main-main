@@ -317,21 +317,22 @@ iframe {
   }
 
   .imagen-servicio {
-    display: block;
-    max-width: 400px;
     width: 100%;
+    max-width: 500px;
     height: auto;
-    margin: 0 auto 20px auto;
+    display: block;
+    margin: 0 auto;
+    float: none;
+    margin-left: 0;
     border: 8px solid #2a5e2a;
     border-radius: 20px;
     box-shadow: 6px 6px 0 #000;
     transition: transform 0.3s ease-in-out;
   }
-  
+
   .imagen-servicio:hover {
     transform: scale(1.05) rotate(-2deg);
   }
-  
 
   img {
     float: none;
@@ -361,5 +362,20 @@ iframe {
     padding: 8px 16px;
     font-size: 14px;
   }
+}
+.imagen-servicio {
+  display: block;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  border: 8px solid #2a5e2a;
+  border-radius: 20px;
+  box-shadow: 6px 6px 0 #000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.imagen-servicio:hover {
+  transform: scale(1.05) rotate(-2deg);
 }
   
